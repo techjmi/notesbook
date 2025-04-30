@@ -86,7 +86,7 @@ const Login = () => {
         {/* <div className="my-4 text-center text-sm text-gray-500">or</div>
         <GoogleButton onClick={onGoogleClick} /> */}
         <p className="mt-4 text-sm text-center text-gray-600">
-          Don't have an account?{" "}
+          Dont have an account?
           <a href="/signup" className="text-indigo-600 hover:underline">
             Sign Up
           </a>
