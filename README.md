@@ -185,8 +185,7 @@ You **must be logged in** (JWT token required) to:
 
 ## Author
 
-**Md Shamim Akhter**  
-[LinkedIn](https://www.linkedin.com/in/md-shamim-akhter-b12624193)  
+**Md Shamim Akhter**    
 [GitHub](https://github.com/techjmi)
-
+visit More Website By Author :https://learningblog.fun/
 ---
