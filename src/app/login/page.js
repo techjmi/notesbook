@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useUser } from "../context/userContext";
@@ -47,7 +47,7 @@ const Login = () => {
   };
   return (
     <div className="flex justify-center items-center md:mt-12">
-      <div className="w-full max-w-sm p-6 bg-white rounded-xl ">
+      <div className="w-full max-w-sm p-6  rounded-xl ">
         <h2 className="text-xl font-semibold text-center mb-5">Login</h2>
 
         <form onSubmit={handleSubmit}>
@@ -84,9 +84,9 @@ const Login = () => {
             Login
           </button>
         </form>
-        <div className="my-4 text-center text-sm text-gray-500">or</div>
+        <div className="my-4 text-center text-sm">or</div>
         <GoogleButton onClick={onGoogleClick} />
-        <p className="mt-4 text-sm text-center text-gray-600">
+        <p className="mt-4 text-sm text-center">
           Dont have an account?
           <a href="/signup" className="text-indigo-600 hover:underline">
             Sign Up

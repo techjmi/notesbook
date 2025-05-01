@@ -30,8 +30,8 @@ const Todays = () => {
   };
 
   return (
-    <div className="w-full mx-auto py-10 md:min-h-screen md:px-16 px-2">
-      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+    <div className="w-full mx-auto md:min-h-screen px-2">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">
         Today's Notes
       </h1>
 

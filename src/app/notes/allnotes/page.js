@@ -86,7 +86,7 @@ const NotesPage = () => {
   return (
     <div className="w-full mx-auto py-10 md:min-h-screen md:px-16 px-2">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h1 className="text-2xl md:text-3xl font-bold">
           Your Notes
         </h1>
         <button
@@ -104,7 +104,7 @@ const NotesPage = () => {
             <div
               key={note._id}
               data-aos="fade-up"
-              className="relative group border border-gray-200 rounded-xl p-5 bg-white shadow-md hover:shadow-lg transition-all"
+              className="relative group border border-gray-200 rounded-xl p-5 bg-white shadow-sm transition-all"
             >
               {/* Tag Label */}
               <div

@@ -34,7 +34,7 @@ const PastNotes = () => {
 
   return (
     <div className="w-full mx-auto md:min-h-screen px-2">
-      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6">
         Past Notes
       </h1>
 

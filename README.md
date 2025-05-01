@@ -14,6 +14,8 @@ A full-stack Notes App built with Next.js, allowing users to sign up, log in (vi
 
 ### Dashboard View
 ![Dashboard](./public/ui.png)
+### Mobile UI
+![Mobile view](./public/mobile-ui.png)
 
 
 ##  Live Demo

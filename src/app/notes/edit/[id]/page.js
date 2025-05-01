@@ -53,7 +53,7 @@ const EditNotePage = () => {
     <div className="md:w-1/2 mx-auto md:px-4 py-10 px-2 w-full">
       <button
         onClick={() => router.back()}
-        className="mb-6 flex items-center text-blue-600 hover:underline"
+        className="mb-6 flex items-center text-blue-600 hover:underline cursor-pointer"
       >
         <AiOutlineArrowLeft className="mr-2" size={18} />
         Back to Notes
@@ -61,12 +61,12 @@ const EditNotePage = () => {
 
       <div
         data-aos="fade-up"
-        className="bg-white  rounded-xl p-6"
+        className="rounded-xl p-6"
       >
-        <h1 className="text-2xl font-bold mb-4 text-gray-800">Edit Note</h1>
+        <h1 className="text-2xl font-bold mb-4">Edit Note</h1>
         <form onSubmit={handleUpdate} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium  mb-1">
               Title
             </label>
             <input
@@ -78,7 +78,7 @@ const EditNotePage = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium  mb-1">
               Content
             </label>
             <textarea
@@ -92,7 +92,7 @@ const EditNotePage = () => {
           <button
             type="submit"
             disabled={saving}
-            className="bg-blue-600 text-white cursor-pointer px-3 py-2 rounded-2xl hover:bg-green-800 transition disabled:opacity-50 "
+            className="bg-blue-600  cursor-pointer px-3 py-2 rounded-2xl hover:bg-green-800 transition disabled:opacity-50 "
           >
             {saving ? "Updating..." : "Update Note"}
           </button>

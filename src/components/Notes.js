@@ -86,12 +86,12 @@ const Notes = () => {
   return (
     <div className="w-full mx-auto md:min-h-screen px-2">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h1 className="text-2xl md:text-3xl font-bold">
           Your Notes
         </h1>
         <button
           onClick={() => router.push("/notes/create")}
-          className="bg-blue-600 text-white px-4 cursor-pointer py-2 rounded hover:bg-blue-700 transition w-fit"
+          className="bg-blue-600  px-4 cursor-pointer py-2 rounded hover:bg-blue-700 transition w-fit"
         >
           + Create New Note
         </button>

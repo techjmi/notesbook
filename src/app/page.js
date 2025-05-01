@@ -8,16 +8,16 @@ export default function Home() {
   const { user } = useUser();
   const router = useRouter();
   return (
-    <div className="md:min-h-screen flex items-center justify-center px-4 py-10 bg-gray-50">
+    <div className="md:min-h-screen flex items-center justify-center px-4 py-10">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
         {/* Text Section */}
         <div className="space-y-6">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+          <h1 className="text-3xl md:text-5xl font-bold ">
             {user
               ? `Welcome back, ${user.name || "User"}!`
               : "Your Personal Notes, Organized."}
           </h1>
-          <p className="text-gray-600 text-lg">
+          <p className="text-lg">
             {user
               ? "Access and manage all your saved notes easily."
               : "Create, manage, and access your notes securely anytime, anywhere."}
@@ -53,7 +53,7 @@ export default function Home() {
           <img
             src={url}
             alt="Notes Illustration"
-            className="w-full h-auto max-h-[400px] mx-auto rounded-xl"
+            className="w-full h-auto max-h-[400px] mx-auto rounded-lg"
           />
         </div>
       </div>

@@ -6,7 +6,11 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [darkMode, setDarkMode] = useState(false); 
 
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev);
+  };
   const fetchUser = async () => {
     try {
       const res = await axios.get("/api/user", { withCredentials: true });
@@ -21,8 +25,11 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setUser, refreshUser: fetchUser }}>
-      {children}
+    <UserContext.Provider value={{ user, setUser, refreshUser: fetchUser ,darkMode, toggleTheme}}>
+      <div className={darkMode ? 'bg-black text-white min-h-screen' : 'bg-white text-black min-h-screen'}>
+        {children}
+      </div>
+      {/* {children} */}
     </UserContext.Provider>
   );
 };

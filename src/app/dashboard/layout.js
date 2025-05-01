@@ -4,12 +4,12 @@ export default function DashboardLayout({ children }) {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Sidebar */}
-      <div className="md:w-1/4 w-full bg-gray-200 p-4 border-b md:border-b-0 md:border-r border-gray-300">
+      <div className="md:w-1/4 w-full p-4 border-b md:border-b-0 md:border-r border-gray-300">
         <ul className="space-y-4">
           <li>
             <Link
               href="/dashboard/profile"
-              className="text-gray-800 hover:underline"
+              className="hover:underline"
             >
               Profile
             </Link>
@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }) {
           <li>
             <Link
               href="/dashboard/notes"
-              className="text-gray-800 hover:underline"
+              className="hover:underline"
             >
               All Notes
             </Link>
@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }) {
           <li>
             <Link
               href="/dashboard/today"
-              className="text-gray-800 hover:underline"
+              className="hover:underline"
             >
               Today’s Notes
             </Link>
@@ -33,7 +33,7 @@ export default function DashboardLayout({ children }) {
           <li>
             <Link
               href="/dashboard/upcoming"
-              className="text-gray-800 hover:underline"
+              className="hover:underline"
             >
               Upcoming Notes
             </Link>
@@ -41,7 +41,7 @@ export default function DashboardLayout({ children }) {
           <li>
             <Link
               href="/dashboard/past"
-              className="text-gray-800 hover:underline"
+              className="hover:underline"
             >
               Past Notes
             </Link>

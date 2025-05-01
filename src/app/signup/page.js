@@ -13,7 +13,6 @@ const Signup = () => {
     name: "",
     password: "",
   });
-
   const [error, setError] = useState("");
   const { refreshUser } = useUser();
   // const router = useRouter();
@@ -58,8 +57,6 @@ const Signup = () => {
   const onGoogleClick = async () => {
     try {
       const user = await handleGoogleLogin();
-      // console.log("Logged in:", user);
-      // redirect or set user context
       refreshUser();
       router.push("/dashboard");
     } catch (err) {
@@ -68,15 +65,15 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-100 to-white">
-      <div className="w-full max-w-sm p-6 bg-white rounded-xl border border-gray-200">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="w-full max-w-sm p-6 rounded-xl">
+        <h2 className="text-2xl font-bold text-center  mb-6">
           Create Account
         </h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-sm text-gray-700 mb-1" htmlFor="name">
+            <label className="block text-sm mb-1" htmlFor="name">
               Name
             </label>
             <input
@@ -90,7 +87,7 @@ const Signup = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-sm text-gray-700 mb-1" htmlFor="email">
+            <label className="block text-sm mb-1" htmlFor="email">
               Email
             </label>
             <input
@@ -105,7 +102,7 @@ const Signup = () => {
 
           <div className="mb-6">
             <label
-              className="block text-sm text-gray-700 mb-1"
+              className="block text-sm mb-1"
               htmlFor="password"
             >
               Password
@@ -128,11 +125,11 @@ const Signup = () => {
           </button>
         </form>
 
-        <div className="my-4 text-center text-sm text-gray-500">or</div>
+        <div className="my-4 text-center text-sm ">or</div>
 
         <GoogleButton onClick={onGoogleClick} />
 
-        <p className="mt-4 text-center text-sm text-gray-600">
+        <p className="mt-4 text-center text-sm ">
           Already have an account?
           <Link href="/login" className="text-indigo-600 hover:underline ml-1">
             Login
