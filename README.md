@@ -1,6 +1,4 @@
 
-Sure! Below is a clean and professional `README.md` for your Next.js Notes app project, with clear structure, technology stack, usage instructions, route info, and Postman testing details:
-
 ---
 
 # NotesBook 
