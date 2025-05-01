@@ -39,7 +39,9 @@ const Navbar = () => {
   return (
     <header className="bg-indigo-600 text-white shadow md:px-10 sticky top-0 z-40">
       <nav className="flex items-center justify-between py-2 md:px-7 px-2">
-        <div className="text-xl font-bold">Logo</div>
+        <Link href='/'>
+        <div className="text-xl font-bold cursor-pointer">Logo</div>
+        </Link>
         <div className="lg:hidden">
           <button onClick={toggleMenu}>
             <FaBars size={24} />

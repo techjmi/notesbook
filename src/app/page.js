@@ -26,7 +26,7 @@ export default function Home() {
           {user ? (
             <button
               onClick={() => router.push("/notes/allnotes")}
-              className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-center mx-auto"
+              className="px-6 py-2 bg-blue-600 text-white  cursor-pointer rounded hover:bg-blue-700 transition text-center mx-auto"
             >
               View Your Notes
             </button>
@@ -34,13 +34,13 @@ export default function Home() {
             <div className="space-x-4">
               <button
                 onClick={() => router.push("/login")}
-                className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                className="px-6 py-2 bg-blue-600 text-white cursor-pointer rounded hover:bg-blue-700 transition"
               >
                 Login
               </button>
               <button
                 onClick={() => router.push("/signup")}
-                className="px-6 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"
+                className="px-6 py-2 border cursor-pointer border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition"
               >
                 Sign Up
               </button>

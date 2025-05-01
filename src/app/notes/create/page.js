@@ -3,19 +3,23 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-toastify";
+
 const CreateNote = () => {
   const router = useRouter();
   const [form, setForm] = useState({
     title: "",
     content: "",
+    date: "",
   });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
-const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.title || !form.content) {
+    if (!form.title || !form.content || !form.date) {
       toast.error("Please fill in all fields");
       return;
     }
@@ -26,7 +30,8 @@ const handleSubmit = async (e) => {
     } catch (err) {
       toast.error("Failed to create note");
     }
-};
+  };
+
   return (
     <div className="max-w-2xl mx-auto py-12 px-4">
       <h1 className="text-2xl font-semibold mb-6 text-center">Create a New Note</h1>
@@ -54,9 +59,21 @@ const handleSubmit = async (e) => {
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
+
+        <div>
+          <label className="block mb-1 text-sm font-medium">Date</label>
+          <input
+            name="date"
+            type="date"
+            value={form.date}
+            onChange={handleChange}
+            className="w-full px-3 py-2 cursor-pointer border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
         <button
           type="submit"
-          className=" bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+          className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition cursor-pointer"
         >
           Save Note
         </button>

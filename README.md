@@ -3,7 +3,18 @@
 
 # NotesBook 
 
-A full-stack **Notes App** built with **Next.js**, allowing users to sign up, log in (with email/password or Google), and manage their personal notes in a dashboard. Authentication is required to access the dashboard and perform note operations.
+A full-stack Notes App built with Next.js, allowing users to sign up, log in (via email/password or Google), and manage their personal notes in a secured dashboard. Once logged in, users can view, create, edit, or delete notes — now grouped smartly into Past Notes, Today's Notes, and Upcoming Notes based on their scheduled dates. Authentication is required to access the dashboard and all note operations.
+## Features
+- JWT Auth
+- Google Login
+- CRUD Notes
+- Grouped Notes (Past, Today, Upcoming)
+
+## 📸 Screenshots
+
+### Dashboard View
+![Dashboard](./public/ui.png)
+
 
 ##  Live Demo
 
@@ -42,6 +53,10 @@ A full-stack **Notes App** built with **Next.js**, allowing users to sign up, lo
 - `src/components/` – Reusable React components
 - `src/lib/firebase.js` – Firebase configuration
 - `src/utility/googleLogin.js` – Google login utility function
+- `src/components/UpcomingNotes.js` – Component for displaying upcoming notes
+- `src/components/TodayNotes.js` – Component for displaying today’s notes
+- `src/components/PastNotes.js` – Component for displaying past notes
+
 
 ---
 
@@ -178,6 +193,17 @@ You **must be logged in** (JWT token required) to:
 - View all notes
 - Create, edit, or delete notes
 - View user profile
+---
+
+## 🗂️ Note Grouping by Date
+
+On the dashboard, notes are categorized based on their scheduled date:
+
+- **Today’s Notes** – Notes scheduled for the current day.
+- **Upcoming Notes** – Notes scheduled for future dates.
+- **Past Notes** – Notes whose scheduled date has already passed.
+
+These are rendered using dedicated UI components and fetched based on their type from the backend.
 
 ---
 
